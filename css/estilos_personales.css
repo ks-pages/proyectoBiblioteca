@@ -1,0 +1,16 @@
+body{
+    background: #18457c;
+    background: -moz-linear-gradient(left, #051937, #004d7a); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #051937, #004d7a); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #051937, #004d7a); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#051937', endColorstr='#004d7a',GradientType=1 ); /* IE6-9 */
+}
+
+.rounded-personalizado {
+    border-radius: 0.50rem !important;
+}
+
+
+.rounded-button {
+    border-radius: 0.80rem !important;
+}

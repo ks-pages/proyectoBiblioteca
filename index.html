@@ -7,15 +7,35 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos_personales.css">
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container-fluid">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+                <div class="row">
+                    <div class="col-9">
+                        <input type="text" class="form-control" placeholder="Buscar por....">
+                    </div>
+                    <div class="col-2">
+                        <select id="inputState" class="form-control">
+                            <option>Palabra o Frase</option>
+                            <option>Autor</option>
+                            <option>Titulo</option>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <button type="button" class="btn btn-outline-dark rounded-button">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
   </body>
 </html>
