@@ -8,49 +8,120 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos_personales.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
     <title>Biblioteca</title>
   </head>
   <body class="fondo-busqueda">
 
   <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 text-center encabezado-centrado">
+              <h1 class="color-h">Universidad Tecnológica de la Mixteca</h1>
+              <h2 class="color-h">Biblioteca</h2>
+              <h4 class="color-h">Consulta Bibliográfica</h4>
+          </div>
+      </div>
 
-      <!--Buscador-->
-        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
-            <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
-                <div class="row">
-                    <div class="col-lg-8 col-sm-12">
-                        <input type="text" class="form-control" placeholder="Buscar por....">
-                    </div>
-                    <div class="col-lg-2">
-                        <select id="inputState" class="form-control opcion-busqueda">
-                            <option>Palabra o Frase</option>
-                            <option>Autor</option>
-                            <option>Titulo</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-1 col-sm-12  btn-consulta">
-                        <button type="button" class="btn btn-outline-dark rounded-button">Consultar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-      <!--Fin del Buscador-->
-     <!-- <div class="row">
-          <div class="col-8">
-              <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
-
+      <div class="row">
+          <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
+              <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado buscador-centrado">
+                  <div class="row">
+                      <div class="col-lg-2 text-right">
+                          <select id="inputState" class="form-control opcion-busqueda">
+                              <option>Palabra o Frase</option>
+                              <option>Autor</option>
+                              <option>Titulo</option>
+                          </select>
+                      </div>
+                      <div class="col-lg-8">
+                          <input type="text" class="form-control" placeholder="Buscar por....">
+                      </div>
+                      <div class="col-1">
+                          <button type="button" class="btn btn-outline-dark rounded-button">Consultar</button>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                      <div class="col-lg-4 text-center">
+                          <button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</button>
+                      </div>
+                      <div class="col-lg-4 text-center">
+                          <button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalRecurso">Recursos Electrónicos de Acceso Libre</button>
+                      </div>
+                      <div class="col-lg-4 text-center dropdown">
+                          <button type="button" class="btn btn-outline-dark rounded-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comentarios</button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Restricción de Reservación</a>
+                              <a class="dropdown-item" href="#">Tabla de Sanciones</a>
+                              <a class="dropdown-item" href="#">Horarios de Reservación y Préstamos</a>
+                          </div>
+                      </div>
+                  </div>
               </div>
           </div>
-          <div class="col">
-              <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+          <!--Fin del Buscador-->
+      </div>
 
-              </div>
-              <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+      <!-- Modal ultimas adquisiciones-->
+      <div class="modal fade modalAdquisiciones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalAdquisiciones">Últimas Adquisiciones</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
 
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  </div>
               </div>
           </div>
       </div>
--->
+
+      <!-- Modal recursos-->
+      <div class="modal fade modalRecurso" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalRecurso">Recursos Electrónicos de Acceso Libre</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <table class="table table-borderless">
+                          <thead>
+                          <tr class="text-center">
+                              <th scope="col">Nombre</th>
+                              <th scope="col">Sitio</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td class="font-italic">Biblioteca Digital Mundial de la UNESCO</td>
+                              <td class="text-center"><a href="https://www.wdl.org" target="_blank"><i class="fa fa-rocket fa-2x" aria-hidden="true"></i> Acceder...</a></td>
+                          </tr>
+                          <tr>
+                              <td class="font-italic">DOAJ</td>
+                              <td class="text-center"><a href="https://www.doaj.org" target="_blank"><i class="fa fa-rocket fa-2x" aria-hidden="true"></i> Acceder...</a></td>
+                          </tr>
+                          <tr>
+                              <td class="font-italic">El Libro Total</td>
+                              <td class="text-center"><a href="https://www.ellibrototal.com " target="_blank"><i class="fa fa-rocket fa-2x" aria-hidden="true"></i> Acceder...</a></td>
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
 
     </div>
 

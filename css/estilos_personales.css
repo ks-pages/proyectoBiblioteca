@@ -29,9 +29,17 @@ body{
     border-radius: 0.80rem !important;
 }
 
-.btn-consulta{
-    padding-left: 40px;
+.buscador-centrado{
+    margin-top: calc(10% - (0.5rem * 2));
 }
-.opcion-busqueda{
-    width: auto;
+.encabezado-centrado{
+    margin-top: calc(8% - (0.5rem * 2));
+}
+
+.color-h{
+    color: #ffffff;
+}
+
+i.fa-rocket{
+    color: #060303;
 }
