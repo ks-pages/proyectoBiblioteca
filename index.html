@@ -8,32 +8,52 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos_personales.css">
-    <title>Hello, world!</title>
+    <title>Biblioteca</title>
   </head>
-  <body>
-    <div class="container-fluid">
+  <body class="fondo-busqueda">
 
+  <div class="container-fluid">
+
+      <!--Buscador-->
         <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
             <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-lg-8 col-sm-12">
                         <input type="text" class="form-control" placeholder="Buscar por....">
                     </div>
-                    <div class="col-2">
-                        <select id="inputState" class="form-control">
+                    <div class="col-lg-2">
+                        <select id="inputState" class="form-control opcion-busqueda">
                             <option>Palabra o Frase</option>
                             <option>Autor</option>
                             <option>Titulo</option>
                         </select>
                     </div>
-                    <div class="col-1">
-                        <button type="button" class="btn btn-outline-dark rounded-button">Buscar</button>
+                    <div class="col-lg-1 col-sm-12  btn-consulta">
+                        <button type="button" class="btn btn-outline-dark rounded-button">Consultar</button>
                     </div>
                 </div>
             </div>
         </div>
+      <!--Fin del Buscador-->
+     <!-- <div class="row">
+          <div class="col-8">
+              <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+
+              </div>
+          </div>
+          <div class="col">
+              <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+
+              </div>
+              <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+
+              </div>
+          </div>
+      </div>
+-->
 
     </div>
+
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
