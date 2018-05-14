@@ -62,6 +62,10 @@ i.fa-window-close-o{
     color: #cf0f05;
 }
 
+i.fa-shopping-basket{
+    color: #ffffff;
+}
+
 .caja-busqueda{
 width: 350px !important;
 }
@@ -81,4 +85,36 @@ width: 350px !important;
 .home-tabla{
     font-size:1.7em !important;
     vertical-align:-18% !important;
+}
+
+.cantidad{
+    vertical-align:30% !important;
+}
+
+.badge-personalizado{
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+
+@media (min-width: 992px) {
+
+    .card-size{
+        width: 600px !important;
+    }
+
+    .ml-lg-5II {
+        margin-left: 8rem !important;
+    }
+
+    .ml-lg-5III {
+        margin-left: 12rem !important;
+    }
 }
