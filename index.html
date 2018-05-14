@@ -11,7 +11,7 @@
      <link rel="stylesheet" href="css/font-awesome.min.css">
     <title>Biblioteca</title>
   </head>
-  <body class="fondo-busqueda">
+  <body class="fondo-personal">
 
   <div class="container-fluid">
       <div class="row">
@@ -37,7 +37,7 @@
                           <input type="text" class="form-control" placeholder="Buscar por....">
                       </div>
                       <div class="col-1">
-                          <button type="button" class="btn btn-outline-dark rounded-button">Consultar</button>
+                          <a href="resultado_busqueda.html" class="btn btn-outline-dark rounded-button">Consultar</a>
                       </div>
                   </div>
                   <br>
@@ -67,12 +67,42 @@
           <div class="modal-dialog modal-lg modal-dialog-centered">
               <div class="modal-content">
                   <div class="modal-header">
-                      <h5 class="modal-title" id="modalAdquisiciones">Últimas Adquisiciones</h5>
+                      <h5 class="modal-title" id="modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                       </button>
                   </div>
                   <div class="modal-body">
+                      <table class="table">
+                          <thead class="thead-dark">
+                          <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Titulo</th>
+                              <th scope="col">Autor</th>
+                              <th scope="col"></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Fundamentos de Bases de Datos</td>
+                              <td>Silberchazt, Abraham / Korth, Henry F.</td>
+                              <td><a href="informacion_libros.html">Ver mas...</a></td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Cinematica y Dinamica</td>
+                              <td>Mirando Colorado, Roger</td>
+                              <td><a href="informacion_libros.html">Ver mas...</a></td>
+                          </tr>
+                          <tr>
+                              <th scope="row">3</th>
+                              <td>Mineria de Datos a traves de ejemplos</td>
+                              <td>Perez Marques, Maria</td>
+                              <td><a href="informacion_libros.html">Ver mas...</a></td>
+                          </tr>
+                          </tbody>
+                      </table>
 
                   </div>
                   <div class="modal-footer">
@@ -94,7 +124,7 @@
                   </div>
                   <div class="modal-body">
                       <table class="table table-borderless">
-                          <thead>
+                          <thead class="thead-dark">
                           <tr class="text-center">
                               <th scope="col">Nombre</th>
                               <th scope="col">Sitio</th>
@@ -103,15 +133,15 @@
                           <tbody>
                           <tr>
                               <td class="font-italic">Biblioteca Digital Mundial de la UNESCO</td>
-                              <td class="text-center"><a href="https://www.wdl.org" target="_blank"><i class="fa fa-rocket fa-2x" aria-hidden="true"></i> Acceder...</a></td>
+                              <td class="text-center"><a href="https://www.wdl.org" target="_blank">Acceder...</a></td>
                           </tr>
                           <tr>
                               <td class="font-italic">DOAJ</td>
-                              <td class="text-center"><a href="https://www.doaj.org" target="_blank"><i class="fa fa-rocket fa-2x" aria-hidden="true"></i> Acceder...</a></td>
+                              <td class="text-center"><a href="https://www.doaj.org" target="_blank">Acceder...</a></td>
                           </tr>
                           <tr>
                               <td class="font-italic">El Libro Total</td>
-                              <td class="text-center"><a href="https://www.ellibrototal.com " target="_blank"><i class="fa fa-rocket fa-2x" aria-hidden="true"></i> Acceder...</a></td>
+                              <td class="text-center"><a href="https://www.ellibrototal.com " target="_blank">Acceder...</a></td>
                           </tr>
                           </tbody>
                       </table>

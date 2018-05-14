@@ -12,12 +12,19 @@
     src: local('Segoe UI'), url('../fonts/segoeui/segoeui.woff') format('woff');
 }
 
-body{
+.fondo-personal{
     background: #18457c;
     background: -moz-linear-gradient(left, #051937, #004d7a); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #051937, #004d7a); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #051937, #004d7a); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#051937', endColorstr='#004d7a',GradientType=1 ); /* IE6-9 */
+}
+
+.fondo-resultados{
+    background: #eceff1;
+}
+
+body{
     font-family: "Google Sans";
 }
 
@@ -35,11 +42,43 @@ body{
 .encabezado-centrado{
     margin-top: calc(8% - (0.5rem * 2));
 }
+.encabezado-centrado-busqueda{
+    margin-top: calc(3% - (0.5rem * 2));
+}
 
 .color-h{
     color: #ffffff;
 }
 
-i.fa-rocket{
-    color: #060303;
+i.fa-home{
+    color: #14cf24;
+}
+
+i.fa-university{
+    color: #1b4ecf;
+}
+
+i.fa-window-close-o{
+    color: #cf0f05;
+}
+
+.caja-busqueda{
+width: 350px !important;
+}
+
+.card-size{
+    width: 400px !important;
+}
+
+.ml-4II{
+    margin-left: 6rem !important;
+}
+
+.fuente-td{
+    font-size: 13px;
+}
+
+.home-tabla{
+    font-size:1.7em !important;
+    vertical-align:-18% !important;
 }
