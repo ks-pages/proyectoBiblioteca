@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca UTM</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos_personales.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+
+<body class="fondo-resultados">
+<nav class="navbar navbar-light bg-light fondo-personal">
+    <h2 class="color-h ">Universidad Tecnológica de la Mixteca</h2>
+    <!--<i class="fa fa-shopping-basket fa-3x fa-align-right"></i>-->
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+        <i class="fa fa-shopping-basket fa-2x fa-align-right"></i> <span class="badge-personalizado badge-light  cantidad ml-2">4</span>
+    </button>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 text-center encabezado-centrado-busqueda">
+            <h2>Biblioteca - Consulta Bibliográfica</h2>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+                <div class="row">
+                    <div class="col-lg-2 text-right">
+                        <select id="inputState" class="form-control opcion-busqueda">
+                            <option>Palabra o Frase</option>
+                            <option>Autor</option>
+                            <option>Titulo</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" placeholder="Buscar por....">
+                    </div>
+                    <div class="col-1">
+                        <a href="resultado_busqueda.html" class="btn btn-outline-dark rounded-button">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <span>Comentarios y dudas a: elizabeth@mixteco.utm.mx y henry@mixteco.utm.mx</span> <br>
+    <span> Copyright@2018 Universidad Tecnológica de la Mixteca All Rights Reserved</span>
+</div>
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/relojDigital.js"></script>
+</body>
+</html>

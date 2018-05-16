@@ -7,15 +7,156 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="css/estilos_personales.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>Biblioteca</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body class="fondo-personal">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 text-center encabezado-centrado">
+              <h1 class="color-h">Universidad Tecnológica de la Mixteca</h1>
+              <h2 class="color-h">Biblioteca</h2>
+              <h4 class="color-h">Consulta Bibliográfica</h4>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
+              <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado buscador-centrado">
+                  <div class="row">
+                      <div class="col-lg-2 text-right">
+                          <select id="inputState" class="form-control opcion-busqueda">
+                              <option>Palabra o Frase</option>
+                              <option>Autor</option>
+                              <option>Titulo</option>
+                          </select>
+                      </div>
+                      <div class="col-lg-8">
+                          <input type="text" class="form-control" placeholder="Buscar por....">
+                      </div>
+                      <div class="col-1">
+                          <a href="resultado_busqueda.html" class="btn btn-outline-dark rounded-button">Consultar</a>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                      <div class="col-lg-4 text-center">
+                          <button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</button>
+                      </div>
+                      <div class="col-lg-4 text-center">
+                          <button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalRecurso">Recursos Electrónicos de Acceso Libre</button>
+                      </div>
+                      <div class="col-lg-4 text-center dropdown">
+                          <button type="button" class="btn btn-outline-dark rounded-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comentarios</button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Restricción de Reservación</a>
+                              <a class="dropdown-item" href="#">Tabla de Sanciones</a>
+                              <a class="dropdown-item" href="#">Horarios de Reservación y Préstamos</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--Fin del Buscador-->
+      </div>
+
+      <!-- Modal ultimas adquisiciones-->
+      <div class="modal fade modalAdquisiciones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <table class="table">
+                          <thead class="thead-dark">
+                          <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Titulo</th>
+                              <th scope="col">Autor</th>
+                              <th scope="col"></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>Fundamentos de Bases de Datos</td>
+                              <td>Silberchazt, Abraham / Korth, Henry F.</td>
+                              <td><a href="informacion_libros.html">Ver mas...</a></td>
+                          </tr>
+                          <tr>
+                              <th scope="row">2</th>
+                              <td>Cinematica y Dinamica</td>
+                              <td>Mirando Colorado, Roger</td>
+                              <td><a href="informacion_libros.html">Ver mas...</a></td>
+                          </tr>
+                          <tr>
+                              <th scope="row">3</th>
+                              <td>Mineria de Datos a traves de ejemplos</td>
+                              <td>Perez Marques, Maria</td>
+                              <td><a href="informacion_libros.html">Ver mas...</a></td>
+                          </tr>
+                          </tbody>
+                      </table>
+
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Modal recursos-->
+      <div class="modal fade modalRecurso" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalRecurso">Recursos Electrónicos de Acceso Libre</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <table class="table table-borderless">
+                          <thead class="thead-dark">
+                          <tr class="text-center">
+                              <th scope="col">Nombre</th>
+                              <th scope="col">Sitio</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td class="font-italic">Biblioteca Digital Mundial de la UNESCO</td>
+                              <td class="text-center"><a href="https://www.wdl.org" target="_blank">Acceder...</a></td>
+                          </tr>
+                          <tr>
+                              <td class="font-italic">DOAJ</td>
+                              <td class="text-center"><a href="https://www.doaj.org" target="_blank">Acceder...</a></td>
+                          </tr>
+                          <tr>
+                              <td class="font-italic">El Libro Total</td>
+                              <td class="text-center"><a href="https://www.ellibrototal.com " target="_blank">Acceder...</a></td>
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </div>
+
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
   </body>
 </html>

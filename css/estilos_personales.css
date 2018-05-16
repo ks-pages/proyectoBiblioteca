@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Google Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Google Sans'), url('../fonts/googleSans/GoogleSans-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI'), url('../fonts/segoeui/segoeui.woff') format('woff');
+}
+
+.fondo-personal{
+    background: #18457c;
+    background: -moz-linear-gradient(left, #051937, #004d7a); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #051937, #004d7a); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #051937, #004d7a); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#051937', endColorstr='#004d7a',GradientType=1 ); /* IE6-9 */
+}
+
+.fondo-resultados{
+    background: #eceff1;
+}
+
+body{
+    font-family: "Google Sans";
+}
+
+.rounded-personalizado {
+    border-radius: 0.50rem !important;
+}
+
+.rounded-button {
+    border-radius: 0.80rem !important;
+}
+
+.buscador-centrado{
+    margin-top: calc(10% - (0.5rem * 2));
+}
+.encabezado-centrado{
+    margin-top: calc(8% - (0.5rem * 2));
+}
+.encabezado-centrado-busqueda{
+    margin-top: calc(3% - (0.5rem * 2));
+}
+
+.color-h{
+    color: #ffffff;
+}
+
+i.fa-home{
+    color: #14cf24;
+}
+
+i.fa-university{
+    color: #1b4ecf;
+}
+
+i.fa-window-close-o{
+    color: #cf0f05;
+}
+
+i.fa-shopping-basket{
+    color: #ffffff;
+}
+
+.caja-busqueda{
+width: 350px !important;
+}
+
+.card-size{
+    width: 400px !important;
+}
+
+.ml-4II{
+    margin-left: 6rem !important;
+}
+
+.fuente-td{
+    font-size: 13px;
+}
+
+.home-tabla{
+    font-size:1.7em !important;
+    vertical-align:-18% !important;
+}
+
+.cantidad{
+    vertical-align:30% !important;
+}
+
+.badge-personalizado{
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #18457c;
+    background: -moz-linear-gradient(left, #051937, #004d7a); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #051937, #004d7a); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #051937, #004d7a); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#051937', endColorstr='#004d7a',GradientType=1 ); /* IE6-9 */
+    color: white;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+
+    .card-size{
+        width: 600px !important;
+    }
+
+    .ml-lg-5II {
+        margin-left: 8rem !important;
+    }
+
+    .ml-lg-5III {
+        margin-left: 12rem !important;
+    }
+}
