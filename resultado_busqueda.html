@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Biblioteca UTM</title>
@@ -13,12 +13,10 @@
 <nav class="navbar navbar-light bg-light fondo-personal">
     <h2 class="color-h ">Universidad Tecnológica de la Mixteca</h2>
     <!--<i class="fa fa-shopping-basket fa-3x fa-align-right"></i>-->
-    <button type="button" class="btn btn-info">
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
         <i class="fa fa-shopping-basket fa-2x fa-align-right"></i> <span class="badge-personalizado badge-light  cantidad ml-2">4</span>
     </button>
 </nav>
-
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 text-center encabezado-centrado-busqueda">
@@ -46,10 +44,14 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+                <div class="row">
+                    <div class="col-8 mb-2 text-right">
+                        <button type="button" class="btn btn-primary">Agregar</button>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-8">
                         <table class="table table-striped">
@@ -60,6 +62,7 @@
                                 <th scope="col">Autor</th>
                                 <th scope="col">Disponibilidad</th>
                                 <th scope="col"></th>
+                                <th scope="col"></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -67,22 +70,49 @@
                                 <th scope="row">1</th>
                                 <td>1-2-3 EN EL MUNDO DE LA ESTADISTICA : (MANUAL DE FORMULAS Y DE APLICACIONES PRACTICAS)</td>
                                 <td>PERSON, RON</td>
-                                <td class="text-center"><i class="fa fa-home home-tabla"></i> <i class="fa fa-university fa-lg"></i></td>
-                                <td>@mdo</td>
+                                <td class="text-center"><i class="fa fa-home home-tabla mr-1"></i> <i class="fa fa-university fa-lg"></i></td>
+                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><input type="checkbox"></td>
                             </tr>
                             <tr class="fuente-td">
                                 <th scope="row">2</th>
                                 <td>68000 ASSEMBLY LANGUAGE PROGRAMMING</td>
                                 <td>LEVENTHYAL, LACE A. / HAWKINS, DOUG</td>
                                 <td class="text-center"><i class="fa fa-window-close-o fa-lg"></i></td>
-                                <td>@fatfat</td>
+                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><input type="checkbox" disabled></td>
                             </tr>
                             <tr class="fuente-td">
                                 <th scope="row">3</th>
                                 <td>L80386 : GUIA DE PROGRAMACIONarry</td>
                                 <td>LEVENTHAL, LANCE</td>
                                 <td class="text-center"><i class="fa fa-university fa-lg"></i></td>
-                                <td>@twitter</td>
+                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><input type="checkbox"></td>
+                            </tr>
+                            <tr class="fuente-td">
+                                <th scope="row">4</th>
+                                <td>EVOLUTIONARY ROBOTICS : THE BIOLOGY, INTELLIGENCE, AND TECHNOLOGY OF SELF-ORGANIZING MACHINES</td>
+                                <td>NOLFI, STEFANO</td>
+                                <td class="text-center"><i class="fa fa-home home-tabla mr-1"></i><i class="fa fa-university fa-lg"></i></td>
+                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><input type="checkbox"></td>
+                            </tr>
+                            <tr class="fuente-td">
+                                <th scope="row">5</th>
+                                <td>PLANNING ALGORITHMS</td>
+                                <td>LAVALLE, STEVEN M.</td>
+                                <td class="text-center"><i class="fa fa-home home-tabla mr-1"></i><i class="fa fa-university fa-lg"></i></td>
+                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><input type="checkbox"></td>
+                            </tr>
+                            <tr class="fuente-td">
+                                <th scope="row">6</th>
+                                <td>MINERIA DE DATOS : A TRAVES DE EJEMPLOS</td>
+                                <td>PEREZ MARQUES, MARIA</td>
+                                <td class="text-center"><i class="fa fa-window-close-o fa-lg"></i></td>
+                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><input type="checkbox" disabled></td>
                             </tr>
                             </tbody>
                         </table>
@@ -148,9 +178,30 @@
     </div>
 </div>
 
-
-
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Libros Solicitados</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Confirmar Prestamo</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <span>Comentarios y dudas a: elizabeth@mixteco.utm.mx y henry@mixteco.utm.mx</span> <br>
+    <span> Copyright@2018 Universidad Tecnológica de la Mixteca All Rights Reserved</span>
+</div>
 <script src="js/jquery.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>

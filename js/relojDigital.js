@@ -64,3 +64,11 @@
     actualizarHora();
     var intervalo = setInterval(actualizarHora, 1000);
 }())
+
+
+
+
+//
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
