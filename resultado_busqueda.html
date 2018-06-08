@@ -13,7 +13,7 @@
 <nav class="navbar navbar-light bg-light fondo-personal">
     <h2 class="color-h ">Universidad Tecnológica de la Mixteca</h2>
     <!--<i class="fa fa-shopping-basket fa-3x fa-align-right"></i>-->
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn btn-carro rounded-personalizado" data-toggle="modal" data-target="#exampleModal">
         <i class="fa fa-shopping-basket fa-2x fa-align-right"></i> <span class="badge-personalizado badge-light  cantidad ml-2">4</span>
     </button>
 </nav>
@@ -23,9 +23,9 @@
             <h2>Biblioteca - Consulta Bibliográfica</h2>
         </div>
     </div>
-    <div class="row mt-2">
-        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
-            <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
                 <div class="row">
                     <div class="col-lg-2 text-right">
                         <select id="inputState" class="form-control opcion-busqueda">
@@ -34,7 +34,7 @@
                             <option>Titulo</option>
                         </select>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-9">
                         <input type="text" class="form-control" placeholder="Buscar por....">
                     </div>
                     <div class="col-1">
@@ -46,10 +46,10 @@
     </div>
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+            <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
                 <div class="row">
                     <div class="col-8 mb-2 text-right">
-                        <button type="button" class="btn btn-primary">Agregar</button>
+                        <button type="button" class="btn btn-outline-primary rounded-personalizado">Agregar</button>
                     </div>
                 </div>
                 <div class="row">
@@ -71,7 +71,7 @@
                                 <td>1-2-3 EN EL MUNDO DE LA ESTADISTICA : (MANUAL DE FORMULAS Y DE APLICACIONES PRACTICAS)</td>
                                 <td>PERSON, RON</td>
                                 <td class="text-center"><i class="fa fa-home home-tabla mr-1"></i> <i class="fa fa-university fa-lg"></i></td>
-                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
                                 <td class="text-center"><input type="checkbox"></td>
                             </tr>
                             <tr class="fuente-td">
@@ -79,15 +79,15 @@
                                 <td>68000 ASSEMBLY LANGUAGE PROGRAMMING</td>
                                 <td>LEVENTHYAL, LACE A. / HAWKINS, DOUG</td>
                                 <td class="text-center"><i class="fa fa-window-close-o fa-lg"></i></td>
-                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
-                                <td class="text-center"><input type="checkbox" disabled></td>
+                                <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><i class="fa fa-window-close" aria-hidden="true"></i></td>
                             </tr>
                             <tr class="fuente-td">
                                 <th scope="row">3</th>
                                 <td>L80386 : GUIA DE PROGRAMACIONarry</td>
                                 <td>LEVENTHAL, LANCE</td>
                                 <td class="text-center"><i class="fa fa-university fa-lg"></i></td>
-                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
                                 <td class="text-center"><input type="checkbox"></td>
                             </tr>
                             <tr class="fuente-td">
@@ -95,7 +95,7 @@
                                 <td>EVOLUTIONARY ROBOTICS : THE BIOLOGY, INTELLIGENCE, AND TECHNOLOGY OF SELF-ORGANIZING MACHINES</td>
                                 <td>NOLFI, STEFANO</td>
                                 <td class="text-center"><i class="fa fa-home home-tabla mr-1"></i><i class="fa fa-university fa-lg"></i></td>
-                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
                                 <td class="text-center"><input type="checkbox"></td>
                             </tr>
                             <tr class="fuente-td">
@@ -103,7 +103,7 @@
                                 <td>PLANNING ALGORITHMS</td>
                                 <td>LAVALLE, STEVEN M.</td>
                                 <td class="text-center"><i class="fa fa-home home-tabla mr-1"></i><i class="fa fa-university fa-lg"></i></td>
-                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
                                 <td class="text-center"><input type="checkbox"></td>
                             </tr>
                             <tr class="fuente-td">
@@ -111,8 +111,8 @@
                                 <td>MINERIA DE DATOS : A TRAVES DE EJEMPLOS</td>
                                 <td>PEREZ MARQUES, MARIA</td>
                                 <td class="text-center"><i class="fa fa-window-close-o fa-lg"></i></td>
-                                <td class="text-center"><a href="datos_libro.html"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
-                                <td class="text-center"><input type="checkbox" disabled></td>
+                                <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
+                                <td class="text-center"><i class="fa fa-window-close" aria-hidden="true"></i></td>
                             </tr>
                             </tbody>
                         </table>
@@ -176,9 +176,76 @@
             </div>
         </div>
     </div>
+    <!--Botones para elementos extras de informacion-->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+                <div class="row">
+                    <div class="col-4 text-center"><button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</button></div>
+                    <div class="col-4 text-center"><button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalRecurso">Recursos Electrónicos de Acceso Libre</button></div>
+                    <div class="col-4 text-center"><button type="button" class="btn btn-outline-dark rounded-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comentarios</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Restricción de Reservación</a>
+                            <a class="dropdown-item" href="#">Tabla de Sanciones</a>
+                            <a class="dropdown-item" href="#">Horarios de Reservación y Préstamos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal  para ver info de ver mas-->
+<div class="modal fade" id="modalVerMas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ejemploModalVerMas">Datos del libro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-3 mr-4">
+                        <img src="images/libro.jpg" class="rounded float-left" alt="auto">
+                        <i class="fa fa-home home-tabla ml-5 mr-5 mt-2" data-toggle="tooltip" data-placement="top" title="Disponible para prestamo externo"></i>
+                        <i class="fa fa-university fa-lg" data-toggle="tooltip" data-placement="top" title="Disponible para prestamo en sala"></i>
+                    </div>
+                    <div class="col">
+                        <span class="font-weight-bold">Título: </span>
+                        <span>ANDROID : PROGRAMACION DE DISPOSITIVOS MOVILES A TRAVES DE EJEMPLOS</span>
+                        <hr>
+                        <span class="font-weight-bold">Autor: </span>
+                        <span>JOSE ENRIQUE AMARO SORIANO</span>
+                        <span class="font-weight-bold ml-4">Editorial: </span><span>Alfa & Omega</span>
+                        <hr>
+                        <span class="font-weight-bold ">ISBN: </span><span>978-607-707-370-3</span>
+                        <span class="font-weight-bold ml-4">Año: </span><span>2012</span>
+                        <span class="font-weight-bold ml-4">País: </span><span>México</span>
+                        <hr>
+                        <span class="font-weight-bold">Ejemplares Disponibles: </span><span>1 de 5</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <span class="font-weight-bold">Tema o materia:</span>
+                        <span>1. ANDROID (SISTEMA OPERATIVO). 2. SISTEMAS OPERATIVOS (COMPUTADORAS). 3. SOFTWARE DE APLICACION - DESARROLLO - 4. COMPUTACION MOVIL.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary rounded-personalizado" data-dismiss="modal">Añadir</button>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- Modal -->
+
+
+<!-- Modal  para ver el carrito con libros solicitados-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -189,19 +256,141 @@
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Fundamentos de Bases de Datos</td>
+                        <td>Silberchazt, Abraham / Korth, Henry F.</td>
+                        <td><button type="button" class="btn btn-outline-danger rounded-personalizado" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash-o" aria-hidden="true" ></i></button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Cinematica y Dinamica</td>
+                        <td>Mirando Colorado, Roger</td>
+                        <td><button type="button" class="btn btn-outline-danger rounded-personalizado" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3<link rel="stylesheet" href="css/estilos_personales.css"></th>
+                        <td>Mineria de Datos a traves de ejemplos</td>
+                        <td>Perez Marques, Maria</td>
+                        <td><button type="button" class="btn btn-outline-danger rounded-personalizado" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Confirmar Prestamo</button>
+                <button type="button" class="btn btn-outline-secondary rounded-button" data-dismiss="modal">Cerrar</button>
+                <a href="login.html" class="btn btn-outline-success rounded-button">Confirmar Prestamo</a>
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- Modal ultimas adquisiciones-->
+<div class="modal fade modalAdquisiciones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Fundamentos de Bases de Datos</td>
+                        <td>Silberchazt, Abraham / Korth, Henry F.</td>
+                        <td><a href="datos_libro.html">Ver mas...</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Cinematica y Dinamica</td>
+                        <td>Mirando Colorado, Roger</td>
+                        <td><a href="datos_libro.html">Ver mas...</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3<link rel="stylesheet" href="css/estilos_personales.css"></th>
+                        <td>Mineria de Datos a traves de ejemplos</td>
+                        <td>Perez Marques, Maria</td>
+                        <td><a href="datos_libro.html">Ver mas...</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary rounded-button" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal recursos-->
+<div class="modal fade modalRecurso" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRecurso">Recursos Electrónicos de Acceso Libre</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-borderless">
+                    <thead class="thead-dark">
+                    <tr class="text-center">
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Sitio</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="font-italic">Biblioteca Digital Mundial de la UNESCO</td>
+                        <td class="text-center"><a href="https://www.wdl.org" target="_blank">Acceder...</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-italic">DOAJ</td>
+                        <td class="text-center"><a href="https://www.doaj.org" target="_blank">Acceder...</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-italic">El Libro Total</td>
+                        <td class="text-center"><a href="https://www.ellibrototal.com " target="_blank">Acceder...</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary rounded-button" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
 <div class="footer">
     <span>Comentarios y dudas a: elizabeth@mixteco.utm.mx y henry@mixteco.utm.mx</span> <br>
-    <span> Copyright@2018 Universidad Tecnológica de la Mixteca All Rights Reserved</span>
-</div>
+    <span> Copyright@2018 | KadaSoftware</span>
+</div>-->
 <script src="js/jquery.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>

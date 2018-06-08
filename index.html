@@ -1,11 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca UTM</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos_personales.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+
+<body class="fondo-resultados">
+<nav class="navbar navbar-light bg-light fondo-personal">
+    <h2 class="color-h ">Universidad Tecnológica de la Mixteca</h2>
+    <!--<i class="fa fa-shopping-basket fa-3x fa-align-right"></i>-->
+    <button type="button" class="btn btn-carro rounded-personalizado" data-toggle="modal" data-target="#exampleModal">
+        <i class="fa fa-shopping-basket fa-2x fa-align-right"></i>
+    </button>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 text-center encabezado-centrado-busqueda">
+            <h2>Biblioteca - Consulta Bibliográfica</h2>
+        </div>
+    </div>
+    <!--Barra de busqueda-->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-4">
+                        <select id="inputState" class="form-control opcion-busqueda">
+                            <option>Palabra o Frase</option>
+                            <option>Autor</option>
+                            <option>Titulo</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-sm-5">
+                        <input type="text" class="form-control" placeholder="Buscar por....">
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-sm-3 text-center">
+                        <a href="resultado_busqueda.html" class="btn btn-outline-dark rounded-button">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--card para elementos de la busqueda-->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
+                <div class="row">
+                    <!--Aca se muestran los resultados de la busqueda-->
+                    <div class="col-lg-8  col-md-8 col-sm-8 class text-center">
+                        <div class="col-12 mt-lg-5">
+                            <img src="images/logo.png" class="rounded mx-auto d-block" alt="272x242">
+                            <br>
+                            <span class="utm">Universidad Tecnológica de la Mixteca</span>
+                            <br>
+                            <span class="utmSistema">Sistema de Consulta y Reservación en Línea</span>
+                        </div>
+                    </div>
+                    <!--Reloj para hora del sistema e instrucciones-->
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="card mb-2 ml-2 mr-lg-3 card-size text-center">
+                                <div class="card-header"> Hora del Sistema </div>
+                                <div class="card-body">
+                                    <div class="col ml-3">
+                                        <div class="form-inline">
+                                            <h5 class="mr-2 ml-lg-5II" id="diaSemana">DiaSemana</h5>
+                                            <h5 class="mr-2" id="dia">DiaFecha</h5>
+                                            <h5 class="mr-2">de</h5>
+                                            <h5 class="mr-2" id="mes">Mes</h5>
+                                            <h5 class="mr-2">del</h5>
+                                            <h5 class="mr-2" id="year">Año</h5>
+                                        </div>
+                                        <br>
+                                        <div class="form-inline ml-4II ml-lg-5III">
+                                            <h5 id="horas">Horas</h5>
+                                            <h5>:</h5>
+                                            <h5 id="minutos">Minutos</h5>
+                                            <h5>:</h5>
+                                            <h5 id="segundos">12</h5>
+                                            <h5 id="ampm" class="ml-2">AM</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card mb-2 ml-2 mr-lg-3 card-size">
+                                <div class="card-header text-center">Instrucciones</div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Al carrito se pueden agregar un máximo de 6 libros.</li>
+                                        <li>Puedes reservar al mismo tiempo libros a sala y domicilio.</li>
+                                        <li><i class="fa fa-home fa-lg"></i> Disponible para prestamo externo.</li>
+                                        <li><i class="fa fa-university fa-lg"></i> Disponible para prestamo en sala.</li>
+                                        <li><i class="fa fa-window-close-o fa-lg"></i> No Disponible</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Botones para elementos extras de informacion-->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado">
+                <div class="row">
+                    <div class="col-4 text-center"><button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</button></div>
+                    <div class="col-4 text-center"><button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalRecurso">Recursos Electrónicos de Acceso Libre</button></div>
+                    <div class="col-4 text-center"><button type="button" class="btn btn-outline-dark rounded-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comentarios</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Restricción de Reservación</a>
+                            <a class="dropdown-item" href="#">Tabla de Sanciones</a>
+                            <a class="dropdown-item" href="#">Horarios de Reservación y Préstamos</a>
+                        </div></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+<br><br>
+
+
+<!-- Modal ultimas adquisiciones-->
+<div class="modal fade modalAdquisiciones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Fundamentos de Bases de Datos</td>
+                        <td>Silberchazt, Abraham / Korth, Henry F.</td>
+                        <td><a href="datos_libro.html">Ver mas...</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Cinematica y Dinamica</td>
+                        <td>Mirando Colorado, Roger</td>
+                        <td><a href="datos_libro.html">Ver mas...</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3<link rel="stylesheet" href="css/estilos_personales.css"></th>
+                        <td>Mineria de Datos a traves de ejemplos</td>
+                        <td>Perez Marques, Maria</td>
+                        <td><a href="datos_libro.html">Ver mas...</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary rounded-button" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal recursos-->
+<div class="modal fade modalRecurso" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRecurso">Recursos Electrónicos de Acceso Libre</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-borderless">
+                    <thead class="thead-dark">
+                    <tr class="text-center">
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Sitio</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="font-italic">Biblioteca Digital Mundial de la UNESCO</td>
+                        <td class="text-center"><a href="https://www.wdl.org" target="_blank">Acceder...</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-italic">DOAJ</td>
+                        <td class="text-center"><a href="https://www.doaj.org" target="_blank">Acceder...</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-italic">El Libro Total</td>
+                        <td class="text-center"><a href="https://www.ellibrototal.com " target="_blank">Acceder...</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary rounded-button" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="footer">
+    <span>Comentarios y dudas a: elizabeth@mixteco.utm.mx y henry@mixteco.utm.mx</span> <br>
+    <span> Copyright@2018 | KadaSoftware</span>
+</div>-->
+
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/relojDigital.js"></script>
+<script src="js/moment.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    &lt;!&ndash; Required meta tags &ndash;&gt;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    &lt;!&ndash; Bootstrap CSS &ndash;&gt;
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos_personales.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -59,99 +342,12 @@
                   </div>
               </div>
           </div>
-          <!--Fin del Buscador-->
+          &lt;!&ndash;Fin del Buscador&ndash;&gt;
       </div>
 
-      <!-- Modal ultimas adquisiciones-->
-      <div class="modal fade modalAdquisiciones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                      <table class="table">
-                          <thead class="thead-dark">
-                          <tr>
-                              <th scope="col">#</th>
-                              <th scope="col">Titulo</th>
-                              <th scope="col">Autor</th>
-                              <th scope="col"></th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                              <th scope="row">1</th>
-                              <td>Fundamentos de Bases de Datos</td>
-                              <td>Silberchazt, Abraham / Korth, Henry F.</td>
-                              <td><a href="informacion_libros.html">Ver mas...</a></td>
-                          </tr>
-                          <tr>
-                              <th scope="row">2</th>
-                              <td>Cinematica y Dinamica</td>
-                              <td>Mirando Colorado, Roger</td>
-                              <td><a href="informacion_libros.html">Ver mas...</a></td>
-                          </tr>
-                          <tr>
-                              <th scope="row">3</th>
-                              <td>Mineria de Datos a traves de ejemplos</td>
-                              <td>Perez Marques, Maria</td>
-                              <td><a href="informacion_libros.html">Ver mas...</a></td>
-                          </tr>
-                          </tbody>
-                      </table>
 
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                  </div>
-              </div>
-          </div>
-      </div>
 
-      <!-- Modal recursos-->
-      <div class="modal fade modalRecurso" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="modalRecurso">Recursos Electrónicos de Acceso Libre</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                      <table class="table table-borderless">
-                          <thead class="thead-dark">
-                          <tr class="text-center">
-                              <th scope="col">Nombre</th>
-                              <th scope="col">Sitio</th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                              <td class="font-italic">Biblioteca Digital Mundial de la UNESCO</td>
-                              <td class="text-center"><a href="https://www.wdl.org" target="_blank">Acceder...</a></td>
-                          </tr>
-                          <tr>
-                              <td class="font-italic">DOAJ</td>
-                              <td class="text-center"><a href="https://www.doaj.org" target="_blank">Acceder...</a></td>
-                          </tr>
-                          <tr>
-                              <td class="font-italic">El Libro Total</td>
-                              <td class="text-center"><a href="https://www.ellibrototal.com " target="_blank">Acceder...</a></td>
-                          </tr>
-                          </tbody>
-                      </table>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                  </div>
-              </div>
-          </div>
-      </div>
+
 
     </div>
 
@@ -160,3 +356,4 @@
     <script src="js/bootstrap.js"></script>
   </body>
 </html>
+-->
