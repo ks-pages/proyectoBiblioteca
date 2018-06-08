@@ -1,40 +1,130 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-    <script src="js/jquery.slim.min.js"></script>
-    <title></title>
-    <!-- <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
- -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos_personales.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>Biblioteca UTM</title>
 </head>
-<body>
-<div id="box">
-    <div id="main"></div>
-    <div id="loginform">
-        <h1>LOGIN</h1>
-        <input type="email" placeholder="Email"/><br>
-        <input type="Password" placeholder="Password"/><br>
-        <button>LOGIN</button>
+<body class="fondo-resultados">
+
+<nav class="navbar navbar-light bg-light fondo-personal">
+    <h2 class="color-h ">Universidad Tecnológica de la Mixteca</h2>
+    <button type="button" class="btn btn-carro rounded-personalizado" data-toggle="modal" data-target="#exampleModal">
+        <i class="fa fa-shopping-basket fa-2x fa-align-right"></i>
+    </button>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 text-center encabezado-centrado-busqueda">
+            <h2>Biblioteca - Consulta Bibliográfica</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <a href="index.html" class="btn btn-outline-breadC rounded-button">Página Principal</a>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <button class="btn btn-info rounded-button">Acceso Usuarios</button>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <button class="btn btn-outline-breadC rounded-button">Confirmar Reservación</button>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <button class="btn btn-outline-breadC rounded-button">Finalizar Reservación</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <ul class="tab-group">
+            <li class="tab active"><a href="#alumnos">Alumnos</a></li>
+            <li class="tab"><a href="#maestros">Maestros</a></li>
+            <li class="tab"><a href="#trabajadores">Trabajadores</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="alumnos">
+                <h1>Acceso para Alumnos</h1>
+                <form action="reservacion.html" method="post">
+                    <div class="field-wrap">
+                        <label>
+                            Matrícula
+                        </label>
+                        <input type="text">
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            Contraseña
+                        </label>
+                        <input type="password">
+                    </div>
+                    <br>
+                    <button class="button button-block rounded-personalizado">Acceder</button>
+                </form>
+            </div>
+
+            <div id="maestros">
+                <h1>Acceso para Maestros</h1>
+                <form action="reservacion.html" method="post">
+                    <div class="field-wrap">
+                        <label>
+                            Correo
+                        </label>
+                        <input type="email">
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            Contraseña
+                        </label>
+                        <input type="password">
+                    </div>
+                    <br>
+                    <button class="button button-block rounded-personalizado">Acceder</button>
+                </form>
+            </div>
+
+            <div id="trabajadores">
+                <h1>Acceso para Trabajadores</h1>
+                <form action="reservacion.html" method="post">
+                    <div class="field-wrap">
+                        <label>
+                            Correo
+                        </label>
+                        <input type="email">
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            Contraseña
+                        </label>
+                        <input type="password">
+                    </div>
+                    <br>
+                    <button class="button button-block rounded-personalizado">Acceder</button>
+                </form>
+            </div>
+
+
+        </div><!-- tab-content -->
+
     </div>
 
-    <div id="signupform">
-        <h1>SIGN UP</h1>
-        <input type="text" placeholder="Full Name"/><br>
-        <input type="email" placeholder="Email"/><br>
-        <input type="password" placeholder="Password"/><br>
-        <button>SIGN UP</button>
-
-    </div>
-
-    <div id="login_msg">Have an Account?</div>
-    <div id="signup_msg">Don't have an Account? </div>
-    <button id="login_btn">Login</button>
-    <button id="signup_btn">Sign Up</button>
-
-
+   <!-- <div class="footer">
+        <span>Comentarios y dudas a: elizabeth@mixteco.utm.mx y henry@mixteco.utm.mx</span> <br>
+        <span> Copyright@2018 | KadaSoftware</span>
+    </div>-->
 </div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

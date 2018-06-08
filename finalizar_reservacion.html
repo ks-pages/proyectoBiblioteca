@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca UTM</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos_personales.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+
+
+<body class="fondo-resultados">
+<nav class="navbar navbar-light bg-light fondo-personal">
+    <h2 class="color-h ">Universidad Tecnológica de la Mixteca</h2>
+    <button type="button" class="btn btn-carro rounded-personalizado" data-toggle="modal" data-target="#exampleModal">
+        <i class="fa fa-shopping-basket fa-2x fa-align-right"></i>
+    </button>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 text-center encabezado-centrado-busqueda">
+            <h2>Biblioteca - Consulta Bibliográfica</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-1p bg-white rounded-personalizado">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <a href="index.html" class="btn btn-outline-breadC rounded-button">Página Principal</a>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <button class="btn btn-outline-breadC rounded-button">Acceso Usuarios</button>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <button class="btn btn-outline-breadC rounded-button">Confirmar Reservación</button>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <button class="btn btn-info rounded-button">Finalizar Reservación</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
+                <div class="row">
+                    <!--Aca se muestran los resultados de la busqueda-->
+                    <div class="col-lg-8  col-md-8 col-sm-8 class text-center">
+                        <div class="row ml-3 mr-3">
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Libros Seleccionados</th>
+                                    <th scope="col">Tipo de Prestamo</th>
+                                    <th scope="col">Hora Limite</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="fuente-td">
+                                    <th scope="row">1</th>
+                                    <td class="align-middle">
+                                        <div class="mr-2">
+                                            <img src="images/libro.jpg" class="rounded float-left size-personalizado">
+                                        </div>
+                                        <br>
+                                        <span>1-2-3 EN EL MUNDO DE LA ESTADISTICA : (MANUAL DE FORMULAS Y DE APLICACIONES PRACTICAS)<br>PERSON, RON</span>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <i class="fa fa-home home-tabla ml-5 mr-5 mt-2" data-toggle="tooltip" data-placement="top" title="Solicitado para prestamo externo"></i>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="font-weight-bold">21:00 hrs</span>
+                                    </td>
+                                </tr>
+                                <tr class="fuente-td">
+                                    <th scope="row">2</th>
+                                    <td>L80386 : GUIA DE PROGRAMACION <br> LEVENTHAL, LANCE</td>
+                                    <td class="text-center align-middle">
+                                        <i class="fa fa-university fa-lg" data-toggle="tooltip" data-placement="top" title="Solicitado para prestamo en sala"></i>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="font-weight-bold">Tienes 29:33 minutos <br> para pasar por el libro.</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row ml-3 mr-3">
+                            <div class="col-12 text-right">
+                                <a href="index.html" class="btn btn-outline-primary rounded-personalizado">Aceptar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Reloj para hora del sistema e instrucciones-->
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="card mb-2 ml-2 mr-lg-3 card-size">
+                                <div class="card-header text-center">Datos del Alumno</div>
+                                <div class="card-body">
+                                    <span class="font-weight-bold">Matrícula: </span><span> 2012020108</span>   <span class="font-weight-bold">Nombre: </span><span> Angel Ortiz Olivera</span>
+                                    <br>
+                                    <span class="font-weight-bold">Carrera: </span><span> Ingeniería en Computación</span>  <span class="font-weight-bold">Semestre: </span><span>Decimo    </span><span class="font-weight-bold">Grupo: </span><span> 1008</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card mb-2 ml-2 mr-lg-3 card-size text-center">
+                                <div class="card-header"> Hora del Sistema </div>
+                                <div class="card-body">
+                                    <div class="col ml-3">
+                                        <div class="form-inline">
+                                            <h5 class="mr-2 ml-lg-5II" id="diaSemana">DiaSemana</h5>
+                                            <h5 class="mr-2" id="dia">DiaFecha</h5>
+                                            <h5 class="mr-2">de</h5>
+                                            <h5 class="mr-2" id="mes">Mes</h5>
+                                            <h5 class="mr-2">del</h5>
+                                            <h5 class="mr-2" id="year">Año</h5>
+                                        </div>
+                                        <br>
+                                        <div class="form-inline ml-4II ml-lg-5III">
+                                            <h5 id="horas">Horas</h5>
+                                            <h5>:</h5>
+                                            <h5 id="minutos">Minutos</h5>
+                                            <h5>:</h5>
+                                            <h5 id="segundos">12</h5>
+                                            <h5 id="ampm" class="ml-2">AM</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="footer">
+    <span>Comentarios y dudas a: elizabeth@mixteco.utm.mx y henry@mixteco.utm.mx</span> <br>
+    <span> Copyright@2018 | KadaSoftware</span>
+</div>-->
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/relojDigital.js"></script>
+</body>
+</html>

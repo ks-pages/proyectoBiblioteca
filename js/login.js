@@ -1,29 +1,43 @@
-$(document).ready(function(){
-    $("#signup_btn").click(function(){
-        $("#main").animate({left:"22.5%"},400);
-        $("#main").animate({left:"30%"},500);
-        $("#loginform").css("visibility","hidden");
-        $("#loginform").animate({left:"12%"},400);
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
+    var $this = $(this),
+        label = $this.prev('label');
 
-        $("#signupform").animate({left:"20%"},400);
-        $("#signupform").animate({left:"15%"},400);
-        $("#signupform").css("visibility","visible");
+    if (e.type === 'keyup') {
+        if ($this.val() === '') {
+            label.removeClass('active highlight');
+        } else {
+            label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+        if( $this.val() === '' ) {
+            label.removeClass('active highlight');
+        } else {
+            label.removeClass('highlight');
+        }
+    } else if (e.type === 'focus') {
 
-    });
+        if( $this.val() === '' ) {
+            label.removeClass('highlight');
+        }
+        else if( $this.val() !== '' ) {
+            label.addClass('highlight');
+        }
+    }
 
-    $("#login_btn").click(function(){
-        $("#main").animate({left:"77.5%"},400);
-        $("#main").animate({left:"70%"},500);
-        $("#signupform").css("visibility","hidden");
-        $("#signupform").animate({left:"75%"},400);
+});
 
-        $("#loginform").animate({left:"60%"},400);
-        $("#loginform").animate({left:"55%"},400);
-        $("#loginform").css("visibility","visible");
+$('.tab a').on('click', function (e) {
 
+    e.preventDefault();
 
+    $(this).parent().addClass('active');
+    $(this).parent().siblings().removeClass('active');
 
+    target = $(this).attr('href');
 
-    });
+    $('.tab-content > div').not(target).hide();
+
+    $(target).fadeIn(600);
+
 });
