@@ -105,27 +105,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="card mb-2 ml-2 mr-lg-3 card-size text-center">
-                                <div class="card-header"> Hora del Sistema </div>
-                                <div class="card-body">
-                                    <div class="col ml-3">
-                                        <div class="form-inline">
-                                            <h5 class="mr-2 ml-lg-5II" id="diaSemana">DiaSemana</h5>
-                                            <h5 class="mr-2" id="dia">DiaFecha</h5>
-                                            <h5 class="mr-2">de</h5>
-                                            <h5 class="mr-2" id="mes">Mes</h5>
-                                            <h5 class="mr-2">del</h5>
-                                            <h5 class="mr-2" id="year">Año</h5>
-                                        </div>
-                                        <br>
-                                        <div class="form-inline ml-4II ml-lg-5III">
-                                            <h5 id="horas">Horas</h5>
-                                            <h5>:</h5>
-                                            <h5 id="minutos">Minutos</h5>
-                                            <h5>:</h5>
-                                            <h5 id="segundos">12</h5>
-                                            <h5 id="ampm" class="ml-2">AM</h5>
-                                        </div>
+                            <div class="card mb-2 ml-2 mr-lg-3 text-center card-size">
+                                <div class="card-header text-center">
+                                    <div class="col">
+                                        <span class="headerCard">Fecha: </span><span id="fecha" class="mr-lg-5 mr-sm-0 headerCard"></span>
+                                        <span class="ml-lg-5 ml-sm-0 headerCard">Hora: </span><span id="hora" class="headerCard"></span>
                                     </div>
                                 </div>
                             </div>
@@ -144,6 +128,10 @@
 <script src="js/jquery.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/relojDigital.js"></script>
+<script src="js/moment.js"></script>
+<script>
+    moment.locale('es');
+</script>
+<script src="js/fecha_hora.js"></script>
 </body>
 </html>

@@ -72,7 +72,7 @@
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="libro1" id="externo1" value="externo1">
-                                            <label class="form-check-label" for="externo1">Externo</label>
+                                            <label class="form-check-label" for="externo1">Domicilio</label>
                                         </div>
                                     </td>
                                 </tr>
@@ -92,7 +92,7 @@
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="libro2" id="externo2" value="externo2">
-                                            <label class="form-check-label" for="externo2">Externo</label>
+                                            <label class="form-check-label" for="externo2">Domicilio</label>
                                         </div>
                                     </td>
                                 </tr>
@@ -106,7 +106,7 @@
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="libro3" id="externo3" value="option2">
-                                            <label class="form-check-label" for="externo3">Externo</label>
+                                            <label class="form-check-label" for="externo3">Domicilio</label>
                                         </div>
                                     </td>
                                 </tr>
@@ -120,7 +120,7 @@
                                     </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="libro4" id="externo4" value="option2">
-                                            <label class="form-check-label" for="externo4">Externo</label>
+                                            <label class="form-check-label" for="externo4">Domicilio</label>
                                         </div>
                                     </td>
                                 </tr>
@@ -134,7 +134,7 @@
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="libro5" id="externo5" value="option2">
-                                            <label class="form-check-label" for="externo5">Externo</label>
+                                            <label class="form-check-label" for="externo5">Domicilio</label>
                                         </div>
                                     </td>
                                 </tr>
@@ -148,7 +148,7 @@
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="libro6" id="externo6" value="option2">
-                                            <label class="form-check-label" for="externo6">Externo</label>
+                                            <label class="form-check-label" for="externo6">Domicilio</label>
                                         </div>
                                     </td>
                                 </tr>
@@ -174,32 +174,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="card mb-2 ml-2 mr-lg-3 card-size text-center">
-                                <div class="card-header"> Hora del Sistema </div>
-                                <div class="card-body">
-                                    <div class="col ml-3">
-                                        <div class="form-inline">
-                                            <h5 class="mr-2 ml-lg-5II" id="diaSemana">DiaSemana</h5>
-                                            <h5 class="mr-2" id="dia">DiaFecha</h5>
-                                            <h5 class="mr-2">de</h5>
-                                            <h5 class="mr-2" id="mes">Mes</h5>
-                                            <h5 class="mr-2">del</h5>
-                                            <h5 class="mr-2" id="year">Año</h5>
-                                        </div>
-                                        <br>
-                                        <div class="form-inline ml-4II ml-lg-5III">
-                                            <h5 id="horas">Horas</h5>
-                                            <h5>:</h5>
-                                            <h5 id="minutos">Minutos</h5>
-                                            <h5>:</h5>
-                                            <h5 id="segundos">12</h5>
-                                            <h5 id="ampm" class="ml-2">AM</h5>
+                        <!--Reloj para hora del sistema e instrucciones-->
+
+                            <div class="row">
+                                <div class="card mb-2 ml-2 mr-lg-3 text-center card-size">
+                                    <div class="card-header text-center">
+                                        <div class="col">
+                                            <span class="headerCard">Fecha: </span><span id="fecha" class="mr-lg-5 mr-sm-0 headerCard"></span>
+                                            <span class="ml-lg-5 ml-sm-0 headerCard">Hora: </span><span id="hora" class="headerCard"></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <div class="row">
                             <div class="card mb-2 ml-2 mr-lg-3 card-size">
                                 <div class="card-header text-center">Tips de Reservación</div>
@@ -227,6 +213,10 @@
 </div>-->
 <script src="js/jquery.slim.min.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/relojDigital.js"></script>
+<script src="js/moment.js"></script>
+<script>
+    moment.locale('es');
+</script>
+<script src="js/fecha_hora.js"></script>
 </body>
 </html>
