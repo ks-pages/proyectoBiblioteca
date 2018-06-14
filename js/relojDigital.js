@@ -11,6 +11,8 @@
             mes = fecha.getMonth(),
             year = fecha.getFullYear();
 
+
+
         // Accedemos a los elementos del DOM para agregar mas adelante sus correspondientes valores
         var pHoras = document.getElementById('horas'),
             pAMPM = document.getElementById('ampm'),
@@ -59,11 +61,12 @@
 
         pMinutos.textContent = minutos;
         pSegundos.textContent = segundos;
+
     };
 
     actualizarHora();
     var intervalo = setInterval(actualizarHora, 1000);
-}())
+}());
 
 
 
@@ -71,4 +74,4 @@
 //
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
-})
+});

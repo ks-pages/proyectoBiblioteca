@@ -49,44 +49,61 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
-                <div class="row">
-                    <!--Aca se muestran los resultados de la busqueda-->
-                    <div class="col-lg-8  col-md-8 col-sm-8 class text-center">
-                        <div class="col-12 mt-lg-4">
-                            <img src="images/logo.png" class="rounded mx-auto d-block" alt="272x242">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab">
+                            <span class="textoSanciones">Sanciones para Alumnos y Empleados</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" >
+                            <span class="textoSanciones">Sanciones para Profesores</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab">
+                            <span class="textoSanciones">Sanciones para Todos los Usuarios</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active divBorder" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="col-12 text-center mt-4">
+                            <h4>Sanciones que se aplican a ALUMNOS y EMPLEADOS con vigencia de hasta UN AÑO</h4>
                             <br>
-                            <span class="utm">Universidad Tecnológica de la Mixteca</span>
-                            <br>
-                            <span class="utmSistema">Sistema de Consulta y Reservación en Línea</span>
+                            Sobre libros prestados a sala
+                        </div>
+                        <div class="table-responsive-md col-10 offset-1">
+                            <table class="table table-hover">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Clave</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Sanción en Dias</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="col-1">
+                                    <th scope="row">1RHS</th>
+                                    <td>PRIMER RETARDO. EL ALUMNO DEVOLVIÓ LOS LIBROS PRESTADOS A SALA CON UNA HORA DE RETRASO</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="col-8">
+                                    <th scope="row">2RHS</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                </tr>
+                                <tr class="">
+                                    <th scope="row">3RHS</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <!--Reloj para hora del sistema e instrucciones-->
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="card mb-2 ml-2 mr-lg-3 text-center card-size">
-                                <div class="card-header text-center">
-                                    <div class="col">
-                                        <span class="headerCard">Fecha: </span><span id="fecha" class="mr-lg-5 mr-sm-0 headerCard"></span>
-                                        <span class="ml-lg-5 ml-sm-0 headerCard">Hora: </span><span id="hora" class="headerCard"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="card mb-2 ml-2 mr-lg-3 card-size">
-                                <div class="card-header text-center headerCard">Instrucciones</div>
-                                <div class="card-body">
-                                    <ul>
-                                        <li>Al carrito se pueden agregar un máximo de 6 libros.</li>
-                                        <li>Puedes reservar al mismo tiempo libros a sala y domicilio.</li>
-                                        <li><i class="fa fa-home fa-lg"></i> Disponible para prestamo externo.</li>
-                                        <li><i class="fa fa-university fa-lg"></i> Disponible para prestamo en sala.</li>
-                                        <li><i class="fa fa-window-close-o fa-lg"></i> No Disponible</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">2</div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">3</div>
                 </div>
             </div>
         </div>
@@ -100,22 +117,22 @@
                     <div class="col-4 text-center"><button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalRecurso">Recursos Electrónicos de Acceso Libre</button></div>
                     <div class="col-4 text-center"><button type="button" class="btn btn-outline-dark rounded-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comentarios</button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Restricción de Reservación</a>
-                            <a class="dropdown-item" href="sanciones.html">Tabla de Sanciones</a>
+                            <a class="dropdown-item" data-toggle="modal" data-target=".modalRestriccion">Restricción de Reservación</a>
+                            <a class="dropdown-item" href="#">Tabla de Sanciones</a>
                             <a class="dropdown-item" href="#">Horarios de Reservación y Préstamos</a>
                         </div></div>
                 </div>
             </div>
         </div>
-        </div>
     </div>
+</div>
 
 <br><br>
 
 
 <!-- Modal ultimas adquisiciones-->
 <div class="modal fade modalAdquisiciones" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg ">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</h5>
@@ -165,7 +182,7 @@
 
 <!-- Modal recursos-->
 <div class="modal fade modalRecurso" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg ">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalRecurso">Recursos Electrónicos de Acceso Libre</h5>
@@ -204,6 +221,35 @@
     </div>
 </div>
 
+
+<!--Modal restricciones-->
+<div class="modal fade modalRestriccion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRestriccion">Renstricción en la Reservación de Libros a Domicilio</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="font-weight-bold">Se ha puesto en funcionamiento una nueva restricción para la reservación de libros a domicilio:</p>
+                <br>
+                <p>
+                    Al momento en que un usuario intenta reservar un libro a domicilio, el sistema revisa si en los últimos 2 días hábiles (L-V) el usuario ha sacado el libro en préstamo a domicilio. Si es así, el sistema revisa la demanda del libro y si los ejemplares disponibles en la Biblioteca se agotaron un día hábil anterior, no se aceptará la reservación del libro temporalmente, permitiéndole hacerlo a partir de las 16:00 hrs.
+                    <br>
+                    En estos casos el sistema le avisará al usuario cuando esté seleccionando su bibliografía a préstamo lo siguiente: "Este libro se le prestó recientemente a domicilio y es muy solicitado"
+                </p>
+                <p>
+                    Este medio permite que el material informativo tenga mayor circulación entre todos los usuarios, evitando que siempre los mismos lo consulten.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary rounded-button" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!--
 <div class="footer">
     <span>Comentarios y dudas a: elizabeth@mixteco.utm.mx y henry@mixteco.utm.mx</span> <br>
@@ -213,134 +259,6 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/moment.js"></script>
-<script>
-    moment.locale('es');
-</script>
-<script src="js/fecha_hora.js"></script>
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-
-<!doctype html>
-<html lang="en">
-  <head>
-    &lt;!&ndash; Required meta tags &ndash;&gt;
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    &lt;!&ndash; Bootstrap CSS &ndash;&gt;
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/estilos_personales.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <title>Biblioteca</title>
-  </head>
-  <body class="fondo-personal">
-
-  <div class="container-fluid">
-      <div class="row">
-          <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 text-center encabezado-centrado">
-              <h1 class="color-h">Universidad Tecnológica de la Mixteca</h1>
-              <h2 class="color-h">Biblioteca</h2>
-              <h4 class="color-h">Consulta Bibliográfica</h4>
-          </div>
-      </div>
-
-      <div class="row">
-          <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12">
-              <div class="shadow-sm p-3 mb-5 bg-white rounded-personalizado buscador-centrado">
-                  <div class="row">
-                      <div class="col-lg-2 text-right">
-                          <select id="inputState" class="form-control opcion-busqueda">
-                              <option>Palabra o Frase</option>
-                              <option>Autor</option>
-                              <option>Titulo</option>
-                          </select>
-                      </div>
-                      <div class="col-lg-8">
-                          <input type="text" class="form-control" placeholder="Buscar por....">
-                      </div>
-                      <div class="col-1">
-                          <a href="resultado_busqueda.html" class="btn btn-outline-dark rounded-button">Consultar</a>
-                      </div>
-                  </div>
-                  <br>
-                  <div class="row">
-                      <div class="col-lg-4 text-center">
-                          <button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalAdquisiciones">Últimas Adquisiciones (8 nuevas)</button>
-                      </div>
-                      <div class="col-lg-4 text-center">
-                          <button type="button" class="btn btn-outline-dark rounded-button" data-toggle="modal" data-target=".modalRecurso">Recursos Electrónicos de Acceso Libre</button>
-                      </div>
-                      <div class="col-lg-4 text-center dropdown">
-                          <button type="button" class="btn btn-outline-dark rounded-button dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comentarios</button>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Restricción de Reservación</a>
-                              <a class="dropdown-item" href="#">Tabla de Sanciones</a>
-                              <a class="dropdown-item" href="#">Horarios de Reservación y Préstamos</a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          &lt;!&ndash;Fin del Buscador&ndash;&gt;
-      </div>
-
-
-
-
-
-    </div>
-
-    <script src="js/jquery.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-  </body>
-</html>
--->
