@@ -70,6 +70,20 @@ i.fa-shopping-basket{
     color: #ffffff;
 }
 
+
+i.fa-cart-plus {
+    color: #343a40;
+    background-color: transparent;
+    background-image: none;
+    border-color: #343a40;
+}
+
+i.fa-cart-plus:hover {
+    color: rgba(52, 58, 64, 0.68);
+
+    border-color: #343a40;
+}
+
 .caja-busqueda{
 width: 350px !important;
 }
@@ -183,6 +197,6 @@ a.btn-outline-breadC {
 
 .form-group a {
     outline: none;
-    width: 100%;
     border-radius: 0.50rem !important;
+    text-align: right;
 }

@@ -1,3 +1,25 @@
+<head>
+    <!--Inserting the scripts once for the whole page-->
+    <script src="https://cdn.rawgit.com/icons8/titanic/master/dist/js/titanic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.5.9/bodymovin.min.js"></script>
+</head>
+<body>
+<!--Inserting an icon-->
+<div class='titanic titanic-checkbox'></div>
+
+<!--Initializing-->
+<script>
+    var titanic = new Titanic({
+        click: true  // auto animated on click/tap (default false)
+    });
+</script>
+
+<!--Clicking turns this icon on-->
+<button onclick="titanic.on(getElementById('checkbox').value)">On</button>
+</body>
+
+
+<!--
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -44,7 +66,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
                 <div class="row">
-                    <!--Aca se muestran los resultados de la busqueda-->
+                    &lt;!&ndash;Aca se muestran los resultados de la busqueda&ndash;&gt;
                     <div class="col-lg-8  col-md-8 col-sm-8 class text-center">
                         <div class="row ml-3 mr-3">
                             <table class="table table-striped">
@@ -92,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--Reloj para hora del sistema e instrucciones-->
+                    &lt;!&ndash;Reloj para hora del sistema e instrucciones&ndash;&gt;
                     <div class="col-lg-4">
                         <div class="row">
                             <div class="card mb-2 ml-2 mr-lg-3 card-size">
@@ -121,10 +143,10 @@
     </div>
 </div>
 
-<!--<div class="footer">
+&lt;!&ndash;<div class="footer">
     <span>Comentarios y dudas a: elizabeth@mixteco.utm.mx y henry@mixteco.utm.mx</span> <br>
     <span> Copyright@2018 | KadaSoftware</span>
-</div>-->
+</div>&ndash;&gt;
 <script src="js/jquery.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
@@ -134,4 +156,4 @@
 </script>
 <script src="js/fecha_hora.js"></script>
 </body>
-</html>
+</html>-->

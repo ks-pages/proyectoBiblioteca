@@ -95,11 +95,6 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
                 <div class="row">
-                    <div class="col-8 mb-2 text-right">
-                        <button type="button" class="btn btn-outline-primary rounded-personalizado">Agregar</button>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-8">
                         <table class="table table-striped">
                             <thead class="thead-dark">
@@ -109,7 +104,7 @@
                                 <th scope="col">Autor</th>
                                 <th scope="col">Disponibilidad</th>
                                 <th scope="col"></th>
-                                <th scope="col"></th>
+                                <th scope="col">Agregar</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -119,7 +114,7 @@
                                 <td>PERSON, RON</td>
                                 <td class="text-center"><i class="fa fa-home home-tabla mr-1"></i> <i class="fa fa-university fa-lg"></i></td>
                                 <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
-                                <td class="text-center"><input type="checkbox"></td>
+                                <td class="text-center"><i class="fa fa-cart-plus fa-2x"  data-toggle="tooltip" data-placement="top" title="Añadir"></i></td>
                             </tr>
                             <tr class="fuente-td">
                                 <th scope="row">2</th>
@@ -135,7 +130,7 @@
                                 <td>LEVENTHAL, LANCE</td>
                                 <td class="text-center"><i class="fa fa-university fa-lg"></i></td>
                                 <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
-                                <td class="text-center"><input type="checkbox"></td>
+                                <td class="text-center"><i class="fa fa-cart-plus fa-2x"  data-toggle="tooltip" data-placement="top" title="Añadir"></i></td>
                             </tr>
                             <tr class="fuente-td">
                                 <th scope="row">4</th>
@@ -143,7 +138,7 @@
                                 <td>NOLFI, STEFANO</td>
                                 <td class="text-center"><i class="fa fa-home home-tabla mr-1"></i><i class="fa fa-university fa-lg"></i></td>
                                 <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
-                                <td class="text-center"><input type="checkbox"></td>
+                                <td class="text-center"><i class="fa fa-cart-plus fa-2x"  data-toggle="tooltip" data-placement="top" title="Añadir"></i></td>
                             </tr>
                             <tr class="fuente-td">
                                 <th scope="row">5</th>
@@ -151,7 +146,9 @@
                                 <td>LAVALLE, STEVEN M.</td>
                                 <td class="text-center"><i class="fa fa-home home-tabla mr-1"></i><i class="fa fa-university fa-lg"></i></td>
                                 <td class="text-center"><a data-toggle="modal" data-target="#modalVerMas"> <i class="fa fa-eye fa-lg" data-toggle="tooltip" data-placement="top" title="Ver Mas"></i></a></td>
-                                <td class="text-center"><input type="checkbox"></td>
+                                <td class="text-center">
+                                    <i class="fa fa-cart-plus fa-2x"  data-toggle="tooltip" data-placement="top" title="Añadir"></i>
+                                </td>
                             </tr>
                             <tr class="fuente-td">
                                 <th scope="row">6</th>
@@ -318,8 +315,8 @@
                                 <label for="passwordAlumno">Contraseña</label>
                                 <input type="password" class="form-control" id="passwordAlumno" placeholder="Ingrese su Contraseña">
                             </div>
-                            <div class="form-group">
-                                <a href="reservacion.html" class="btn btn-outline-primary">Acceder</a>
+                            <div class="text-right">
+                                <a href="reservacion.html" class="btn btn-outline-primary text-right">Acceder</a>
                             </div>
                         </form>
                     </div>
@@ -333,8 +330,8 @@
                                 <label for="passwordMaestro">Contraseña</label>
                                 <input type="password" class="form-control" id="passwordMaestro" placeholder="Ingrese su Contraseña">
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-outline-primary">Acceder</button>
+                            <div class="text-right">
+                                <a href="reservacion.html" class="btn btn-outline-primary text-right">Acceder</a>
                             </div>
                         </form>
                     </div>
@@ -348,8 +345,8 @@
                                 <label for="passwordTrabajador">Contraseña</label>
                                 <input type="password" class="form-control" id="passwordTrabajador" placeholder="Ingrese su Contraseña">
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-outline-primary">Acceder</button>
+                            <div class="text-right">
+                                <a href="reservacion.html" class="btn btn-outline-primary text-right">Acceder</a>
                             </div>
                         </form>
                     </div>
