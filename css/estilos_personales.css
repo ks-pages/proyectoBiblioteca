@@ -170,3 +170,19 @@ a.btn-outline-breadC {
         width: 600px !important;
     }
 }
+
+/*-------------------------------*/
+
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+
+.form-group a {
+    outline: none;
+    width: 100%;
+    border-radius: 0.50rem !important;
+}

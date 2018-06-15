@@ -22,23 +22,6 @@
             <h2>Biblioteca - Consulta Bibliográfica</h2>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="shadow-sm p-3 mb-1p bg-white rounded-personalizado">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <a href="index.html" class="btn btn-outline-breadC rounded-button">Página Principal</a>
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        <button class="btn btn-outline-breadC rounded-button">Acceso Usuarios</button>
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        <button class="btn btn btn-info rounded-button">Confirmar Reservación</button>
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        <button class="btn btn btn-outline-breadC rounded-button">Finalizar Reservación</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <br>
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -157,8 +140,9 @@
                         </div>
                         <div class="row ml-3 mr-3">
                             <div class="col-12 text-right">
-                                <button type="button" class="btn btn-outline-secondary rounded-personalizado mr-2">Cancelar</button>
-                                <a href="finalizar_reservacion.html" class="btn btn-outline-success rounded-personalizado">Finalizar Reservación</a>
+                                <a href="index.html" class="btn btn-outline-secondary rounded-personalizado mr-2">Cancelar</a>
+                                <button data-toggle="modal" data-target="#modalAceptar"  class="btn btn-outline-success rounded-personalizado">Finalizar Reservación</button>
+
                             </div>
                         </div>
                     </div>
@@ -202,6 +186,65 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal de confirmación de reservación-->
+<div class="modal fade" id="modalAceptar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ejemploModalVerMas">Libros Reservados</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row ml-3 mr-3">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Libros Seleccionados</th>
+                            <th scope="col">Tipo de Prestamo</th>
+                            <th scope="col">Hora Limite</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="fuente-td">
+                            <th scope="row">1</th>
+                            <td class="align-middle">
+                                <div class="mr-2">
+                                    <img src="images/libro.jpg" class="rounded float-left size-personalizado">
+                                </div>
+                                <br>
+                                <span>1-2-3 EN EL MUNDO DE LA ESTADISTICA : (MANUAL DE FORMULAS Y DE APLICACIONES PRACTICAS)<br>PERSON, RON</span>
+                            </td>
+                            <td class="text-center align-middle">
+                                <i class="fa fa-home home-tabla ml-5 mr-5 mt-2" data-toggle="tooltip" data-placement="top" title="Solicitado para prestamo externo"></i>
+                            </td>
+                            <td class="text-center">
+                                <span class="font-weight-bold">21:00 hrs</span>
+                            </td>
+                        </tr>
+                        <tr class="fuente-td">
+                            <th scope="row">2</th>
+                            <td>L80386 : GUIA DE PROGRAMACION <br> LEVENTHAL, LANCE</td>
+                            <td class="text-center align-middle">
+                                <i class="fa fa-university fa-lg" data-toggle="tooltip" data-placement="top" title="Solicitado para prestamo en sala"></i>
+                            </td>
+                            <td class="text-center">
+                                <span class="font-weight-bold">Tienes 29:33 minutos <br> para pasar por el libro.</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="index.html" class="btn btn-outline-primary rounded-personalizado">Aceptar</a>
             </div>
         </div>
     </div>

@@ -6,17 +6,64 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos_personales.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
 </head>
 
 
 <body class="fondo-resultados">
+<div class="overlay"></div>
 <nav class="navbar navbar-light bg-light fondo-personal">
     <h2 class="color-h ">Universidad Tecnológica de la Mixteca</h2>
-    <!--<i class="fa fa-shopping-basket fa-3x fa-align-right"></i>-->
-    <button type="button" class="btn btn-carro rounded-personalizado" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn btn-carro rounded-personalizado"  id="sidebarCollapse">
         <i class="fa fa-shopping-basket fa-2x fa-align-right"></i> <span class="badge-personalizado badge-light  cantidad ml-2">4</span>
     </button>
 </nav>
+
+<!--Div lateral para ver carrito de libros-->
+<nav id="sidebar">
+    <div class="sidebar-header text-center ">
+        <h3 class="color-h">Libros Solicitados</h3>
+    </div>
+
+    <div class="modal-body">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Autor</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Fundamentos de Bases de Datos</td>
+                <td>Silberchazt, Abraham / Korth, Henry F.</td>
+                <td><button type="button" class="btn btn-outline-danger rounded-personalizado" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash-o" aria-hidden="true" ></i></button></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Cinematica y Dinamica</td>
+                <td>Mirando Colorado, Roger</td>
+                <td><button type="button" class="btn btn-outline-danger rounded-personalizado" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr>
+                <th scope="row">3<link rel="stylesheet" href="css/estilos_personales.css"></th>
+                <td>Mineria de Datos a traves de ejemplos</td>
+                <td>Perez Marques, Maria</td>
+                <td><button type="button" class="btn btn-outline-danger rounded-personalizado" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary rounded-button" id="dismiss">Cerrar</button>
+        <button class="btn btn-outline-success rounded-button"  data-toggle="modal" data-target=".modalSesion" id="dismiss">Confirmar Prestamo</button>
+    </div>
+</nav>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 text-center encabezado-centrado-busqueda">
@@ -27,17 +74,17 @@
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
                 <div class="row">
-                    <div class="col-lg-2 text-right">
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                         <select id="inputState" class="form-control opcion-busqueda">
                             <option>Palabra o Frase</option>
                             <option>Autor</option>
                             <option>Titulo</option>
                         </select>
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-xl-9  col-lg-8 col-md-8 col-sm-6">
                         <input type="text" class="form-control" placeholder="Buscar por....">
                     </div>
-                    <div class="col-1">
+                    <div class="col-xl-1  col-lg-2 col-md-2 col-sm-4">
                         <a href="resultado_busqueda.html" class="btn btn-outline-dark rounded-button">Consultar</a>
                     </div>
                 </div>
@@ -180,7 +227,8 @@
         </div>
     </div>
 </div>
-</div>
+
+
 <!-- Modal  para ver info de ver mas-->
 <div class="modal fade" id="modalVerMas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -231,51 +279,81 @@
 
 
 
-<!-- Modal  para ver el carrito con libros solicitados-->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal acceso al sistema-->
+<div class="modal fade modalSesion" id="modalSesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Libros Solicitados</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Ingresar al Sistema</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <table class="table">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Titulo</th>
-                        <th scope="col">Autor</th>
-                        <th scope="col"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Fundamentos de Bases de Datos</td>
-                        <td>Silberchazt, Abraham / Korth, Henry F.</td>
-                        <td><button type="button" class="btn btn-outline-danger rounded-personalizado" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash-o" aria-hidden="true" ></i></button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Cinematica y Dinamica</td>
-                        <td>Mirando Colorado, Roger</td>
-                        <td><button type="button" class="btn btn-outline-danger rounded-personalizado" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3<link rel="stylesheet" href="css/estilos_personales.css"></th>
-                        <td>Mineria de Datos a traves de ejemplos</td>
-                        <td>Perez Marques, Maria</td>
-                        <td><button type="button" class="btn btn-outline-danger rounded-personalizado" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary rounded-button" data-dismiss="modal">Cerrar</button>
-                <a href="login.html" class="btn btn-outline-success rounded-button">Confirmar Prestamo</a>
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab">
+                            <span class="textoSanciones">Alumnos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" >
+                            <span class="textoSanciones">Maestros</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab">
+                            <span class="textoSanciones">Trabajadores</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form class="col-8 offset-2 mt-4">
+                            <div class="form-group">
+                                <label for="matricula">Matricula</label>
+                                <input type="text" class="form-control" id="matricula" placeholder="Ingrese su Matricula">
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordAlumno">Contraseña</label>
+                                <input type="password" class="form-control" id="passwordAlumno" placeholder="Ingrese su Contraseña">
+                            </div>
+                            <div class="form-group">
+                                <a href="reservacion.html" class="btn btn-outline-primary">Acceder</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form class="col-8 offset-2 mt-4">
+                            <div class="form-group">
+                                <label for="correoMaestros">Correo</label>
+                                <input type="text" class="form-control" id="correoMaestros" placeholder="Ingrese su Correo">
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordMaestro">Contraseña</label>
+                                <input type="password" class="form-control" id="passwordMaestro" placeholder="Ingrese su Contraseña">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-primary">Acceder</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade " id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <form class="col-8 offset-2 mt-4">
+                            <div class="form-group">
+                                <label for="correoTrabajador">Correo</label>
+                                <input type="text" class="form-control" id="correoTrabajador" placeholder="Ingrese su Correo">
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordTrabajador">Contraseña</label>
+                                <input type="password" class="form-control" id="passwordTrabajador" placeholder="Ingrese su Contraseña">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-primary">Acceder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -377,7 +455,7 @@
     <span>Comentarios y dudas a: elizabeth@mixteco.utm.mx y henry@mixteco.utm.mx</span> <br>
     <span> Copyright@2018 | KadaSoftware</span>
 </div>-->
-<script src="js/jquery.slim.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/moment.js"></script>
@@ -385,5 +463,26 @@
     moment.locale('es');
 </script>
 <script src="js/fecha_hora.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#dismiss, .overlay').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('.overlay').fadeOut();
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('.overlay').fadeIn();
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
 </body>
 </html>
