@@ -11,7 +11,7 @@
 
 <body class="fondo-resultados">
 <nav class="navbar navbar-light bg-light fondo-personal">
-    <h2 class="color-h ">Universidad Tecnológica de la Mixteca</h2>
+    <h3 class="color-h ">Universidad Tecnológica de la Mixteca</h3>
     <!--<i class="fa fa-shopping-basket fa-3x fa-align-right"></i>-->
     <button type="button" class="btn btn-carro rounded-personalizado" data-toggle="modal" data-target="#exampleModal">
         <i class="fa fa-shopping-basket fa-2x fa-align-right"></i>
@@ -25,25 +25,39 @@
     </div>
     <!--Barra de busqueda-->
     <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="shadow-sm p-3 mb-4 bg-white rounded-personalizado">
-                <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-4">
-                        <select id="inputState" class="form-control opcion-busqueda">
-                            <option>Palabra o Frase</option>
-                            <option>Autor</option>
-                            <option>Titulo</option>
-                        </select>
+            <div class="col-12">
+                    <div class="shadow-sm p-3 mb-4 bg-search rounded-personalizado">
+                            <div class="row">
+                                <div class="col-lg-7 lg-md-7 col-sm-12">
+                                    <div class="row">
+                                            <div class="col-lg-2 col-md-3">
+                                                <select id="inputState" class="form-control opcion-busqueda">
+                                                    <option>Palabra o Frase</option>
+                                                    <option>Autor</option>
+                                                    <option>Titulo</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-9 col-md-5">
+                                                <input type="text" class="form-control" placeholder="Buscar por....">
+                                            </div>
+                                            <div class="col-lg-1 col-md-3 text-center">
+                                                <a href="resultado_busqueda.html" class="btn btn-outline-dark rounded-button">Consultar</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-                    <div class="col-lg-9 col-md-8 col-sm-5">
-                        <input type="text" class="form-control" placeholder="Buscar por....">
-                    </div>
-                    <div class="col-lg-1 col-md-2 col-sm-3 text-center">
-                        <a href="resultado_busqueda.html" class="btn btn-outline-dark rounded-button">Consultar</a>
-                    </div>
-                </div>
             </div>
         </div>
+       
+        
+    </div>
+    <div class="row">
+
+
+                
+
+
     </div>
     <!--card para elementos de la busqueda-->
     <div class="row">
@@ -81,7 +95,8 @@
                                         <li>Puedes reservar al mismo tiempo libros a sala y domicilio.</li>
                                         <li><i class="fa fa-home fa-lg"></i> Disponible para prestamo externo.</li>
                                         <li><i class="fa fa-university fa-lg"></i> Disponible para prestamo en sala.</li>
-                                        <li><i class="fa fa-window-close-o fa-lg"></i> No Disponible</li>
+                                        <li><i class="fa fa-home fa-lg"></i> No disponible.</li>
+                                        <li><i class="fa fa-university fa-lg"></i> No disponible.</li>
                                     </ul>
                                 </div>
                             </div>
